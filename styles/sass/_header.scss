@@ -1,0 +1,30 @@
+/**********************************
+        HEADER STYLINGS
+***********************************/
+header {
+    background-color: black;
+    background-image: url(https://media.rawg.io/media/games/126/126fbd5ceacddc6ad16fc96e50b1265b.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    grid-row: 1/3;
+    grid-column: 1/2;
+    color: white;
+
+    div {
+        margin: 100px 0 0 5vw;
+
+        h1 {
+            font-family: $titleFont;
+            font-size: 6rem;
+        }
+        
+        span {
+            font-family: $copyFont;
+            font-size: 1.2rem;
+            color: rgb(200, 200, 200);
+            display: block;
+            margin: 25px 0 0 10px;
+        }
+    }
+}

@@ -1,0 +1,593 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.visuallyHidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0);
+  overflow: hidden;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/**********************************
+        GENERAL STYLINGS
+***********************************/
+html {
+  font-size: 120%;
+}
+
+h2 {
+  color: white;
+  background-color: rgba(20, 28, 41, 0.85);
+  display: inline;
+  font-family: "Oswald", sans-serif;
+  padding: 8px;
+  margin: 0 8px 8px 8px;
+}
+
+.mainWrapper {
+  margin: 0 5vw;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  grid-row: 2/4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+}
+
+.fullScreenBackground {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.skipLink {
+  position: absolute;
+  left: -1000px;
+  top: 5px;
+  z-index: 999;
+  background: white;
+  color: black;
+}
+
+.games li:focus, .games div:focus, select:focus {
+  border: 3px solid red;
+  outline: none;
+}
+
+/**********************************
+        MAIN GRID STYLING
+***********************************/
+.gridFather {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 65vh 75px 1fr;
+      grid-template-rows: 65vh 75px 1fr;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+/**********************************
+   "SCROLL TO TOP" BUTTON STYLINGS
+***********************************/
+.scrollUp {
+  position: fixed;
+  bottom: 10px;
+  right: 7px;
+  font-size: 2rem;
+  background-color: rgba(20, 28, 41, 0.85);
+  border: none;
+}
+
+.scrollUp a {
+  color: white;
+}
+
+/**********************************
+        HEADER STYLINGS
+***********************************/
+header {
+  background-color: black;
+  background-image: url(https://media.rawg.io/media/games/126/126fbd5ceacddc6ad16fc96e50b1265b.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  color: white;
+}
+
+header div {
+  margin: 100px 0 0 5vw;
+}
+
+header div h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 6rem;
+}
+
+header div span {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.2rem;
+  color: #c8c8c8;
+  display: block;
+  margin: 25px 0 0 10px;
+}
+
+/**********************************
+        MAIN SECTION STYLINGS
+***********************************/
+main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  -ms-grid-columns: 270px 1fr;
+      grid-template-columns: 270px 1fr;
+  grid-gap: 15px;
+  margin-bottom: 100px;
+}
+
+main .genreHowTo {
+  width: 270px;
+  height: calc(260px * 2 + 15px);
+  background-color: #141c29;
+  border-radius: 4px;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  color: white;
+  padding: 15px;
+}
+
+main .genreHowTo h4 {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.75rem;
+  margin-bottom: 15px;
+}
+
+main .genreHowTo label {
+  font-family: "Source Sans Pro", sans-serif;
+  display: block;
+}
+
+main .genreHowTo select {
+  margin-top: 5px;
+  width: calc(250px - 50px);
+  font-size: 0.8rem;
+}
+
+/**********************************
+        "HOW TO USE" STYLINGS
+***********************************/
+aside {
+  margin-top: 15px;
+  font-size: 0.8rem;
+}
+
+aside h5 {
+  font-family: "Oswald", sans-serif;
+  font-size: 1rem;
+}
+
+aside ol {
+  list-style-type: decimal;
+  margin-top: 5px;
+  list-style-position: inside;
+}
+
+aside ol li {
+  margin-top: 10px;
+  letter-spacing: 1px;
+  line-height: 1.1;
+  font-weight: 300;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+/**********************************
+    GAME POPUP BOX STYLINGS
+***********************************/
+.popupBox {
+  position: fixed;
+  top: 100px;
+  width: calc(100% - 40%);
+  margin: 0 20%;
+  background-color: white;
+  border-radius: 4px;
+  -webkit-box-shadow: 5px 5px 10px black;
+          box-shadow: 5px 5px 10px black;
+  overflow: auto;
+  font-family: "Source Sans Pro", sans-serif;
+  max-height: 80%;
+}
+
+.popupBox .popupDescription, .popupBox .popupMeta {
+  padding: 10px;
+}
+
+.popupBox .popupDescription p {
+  margin-top: 10px;
+}
+
+.popupBox .popupDescription br {
+  line-height: 1.5rem;
+}
+
+.popupBox .popupDescription h3 {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.popupBox .popupHeader {
+  height: 200px;
+  border-radius: 4px 4px 0 0;
+  background-size: cover;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #6e8ab8;
+}
+
+.popupBox .popupHeader .closePopup {
+  background-color: rgba(20, 28, 41, 0.85);
+  border: none;
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  top: 8px;
+  right: 8px;
+}
+
+.popupBox .popupHeader .closePopup i {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.popupBox .popupHeader .closePopup:hover, .popupBox .popupHeader .closePopup:focus {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+  background-color: #141c29;
+}
+
+.popupBox .popupHeader .closePopup:focus {
+  border: 3px solid red;
+}
+
+.popupBox .popupHeader ul {
+  margin: 0 8px 8px 0;
+  color: white;
+  padding: 8px;
+  background-color: rgba(20, 28, 41, 0.85);
+}
+
+.popupBox .popupHeader ul li {
+  display: inline;
+}
+
+.popupBox .popupHeader ul li i {
+  margin: 0 3px;
+}
+
+/**********************************
+        GAMES GRID STYLING
+***********************************/
+.games {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(240px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  grid-gap: 15px;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+}
+
+/**********************************
+        GAME CARDS STYLING
+***********************************/
+.gameBox {
+  -webkit-box-shadow: 0 0 10px slategray;
+          box-shadow: 0 0 10px slategray;
+  border-radius: 4px;
+  height: 260px;
+  position: relative;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
+.gameBox:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+.gameBox::-moz-focus-inner, .gameBox::-moz-focus-outer {
+  outline: none;
+  border: none;
+}
+
+.gameBox div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 175px;
+  border-radius: 4px 4px 0 0;
+  background-size: cover;
+}
+
+.gameBox article {
+  padding: 5px 8px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 0.8rem;
+}
+
+.gameBox article time {
+  color: #464646;
+}
+
+.gameBox article p {
+  margin-top: 3px;
+}
+
+.gameBox article ul {
+  position: absolute;
+  right: 5px;
+  bottom: 8px;
+}
+
+.gameBox article ul i {
+  margin-right: 3px;
+}
+
+.gameBox li {
+  display: inline;
+}
+
+/**********************************
+    "GET MORE" CARD STYLING
+***********************************/
+.getMore {
+  background-color: #141c29;
+  height: 260px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.getMore .circle {
+  border-radius: 50%;
+  width: 170px;
+  height: 170px;
+  border: 5px solid #6e8ab8;
+  display: block;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.getMore .circle:hover {
+  -webkit-transform: scale(1.08);
+          transform: scale(1.08);
+}
+
+.getMore .circle::before {
+  content: "+";
+  font-size: 8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #6e8ab8;
+  border-radius: 50%;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+/**********************************
+        FOOTER STYLINGS
+***********************************/
+footer {
+  background-color: #141c29;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Source Sans Pro", sans-serif;
+  padding: 15px 0;
+  color: white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+footer p {
+  margin: 0 20px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+footer p a {
+  text-decoration: underline;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  display: inline-block;
+}
+
+footer p a:hover, footer p a:focus {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+}
+
+footer p:last-child {
+  width: 100%;
+}
+
+/**********************************
+        1250PX MEDIA QUERIES
+***********************************/
+@media (max-width: 1250px) {
+  .popupBox {
+    top: 3%;
+    margin: 7%;
+    width: calc(100% - 14%);
+  }
+}
+
+/**********************************
+        750PX MEDIA QUERIES
+***********************************/
+@media (max-width: 750px) {
+  main {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 450px 1fr;
+        grid-template-rows: 450px 1fr;
+  }
+  main .genreHowTo {
+    width: 100%;
+    height: 450px;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+  }
+  .games {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+  }
+  .popupBox {
+    top: 1%;
+    margin: 5%;
+    width: calc(100% - 10%);
+  }
+}

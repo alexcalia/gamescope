@@ -1,0 +1,32 @@
+/**********************************
+        FOOTER STYLINGS
+***********************************/
+footer {
+    background-color: $primeColorOpaque;
+    display: flex;
+    font-family: $copyFont;
+    padding: 15px 0;
+    color: white;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    p {
+        margin: 0 20px;
+        text-align: center;
+        margin-top: 10px;
+        
+        a {
+            text-decoration: underline;
+            transition-duration: 0.3s;
+            display: inline-block;
+
+            &:hover, &:focus {
+                transform: scale(1.01);
+            }
+        }
+    }
+
+    p:last-child {
+        width: 100%;
+    }
+}

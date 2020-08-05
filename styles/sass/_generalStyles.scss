@@ -1,0 +1,75 @@
+/**********************************
+        GENERAL STYLINGS
+***********************************/
+html {
+	font-size: 120%;
+}
+
+h2 {
+    color: white;
+    background-color: $primeColorTransparent;
+    display: inline;
+    font-family: $titleFont;
+    padding: 8px;
+    margin: 0 8px 8px 8px;
+}
+
+.mainWrapper {
+	margin: 0 5vw;
+	grid-row: 2/4;
+	grid-column: 1/2;
+}
+
+.fullScreenBackground {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.5);
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+.skipLink {
+    position: absolute;
+    left: -1000px;
+    top: 5px;
+    z-index: 999;
+    background: white;
+    color: black;
+}
+
+.games li:focus, .games div:focus, select:focus{
+    border: 3px solid red;
+    outline: none;
+}
+
+/**********************************
+        MAIN GRID STYLING
+***********************************/
+.gridFather {
+    display:grid;
+    grid-template-rows: 65vh 75px 1fr;
+    grid-template-columns: 1fr;
+}
+
+
+/**********************************
+   "SCROLL TO TOP" BUTTON STYLINGS
+***********************************/
+.scrollUp {
+    position: fixed;
+    bottom: 10px;
+    right: 7px;
+    font-size: 2rem;
+    background-color: $primeColorTransparent;
+    border: none;
+
+    a {
+        color: white;
+    }
+}
